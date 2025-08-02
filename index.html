@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himanshu Enterprises | Premium Sports Infrastructure Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         /* Additional styles for new icons */
@@ -73,32 +73,35 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="position: relative; min-height: 100vh; width: 100vw; overflow: hidden;">
-        <div class="hero-slideshow" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1;">
-            <div class="hero-overlay"></div>
-            <div class="hero-slides">
-                <!-- Clone of last image for seamless looping -->
-                <img src="images/hero image 3.png" alt="Hero 3 Clone" class="clone">
-                <img src="images/hero image 1.png" alt="Hero 1">
-                <img src="images/hero image 2.png" alt="Hero 2">
-                <img src="images/hero image 3.png" alt="Hero 3">
-                <!-- Clone of first image for seamless looping -->
-                <img src="images/hero image 1.png" alt="Hero 1 Clone" class="clone">
+    <section class="hero">
+        <div class="hero-animated-bg">
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s; --duration: 4s;"></div>
+                <div class="floating-element" style="--delay: 1s; --duration: 6s;"></div>
+                <div class="floating-element" style="--delay: 2s; --duration: 5s;"></div>
+                <div class="floating-element" style="--delay: 0.5s; --duration: 7s;"></div>
+                <div class="floating-element" style="--delay: 1.5s; --duration: 4.5s;"></div>
             </div>
         </div>
+        <div class="hero-particles"></div>
         <div class="container hero-content">
-            <div class="hero-glass-bg"></div>
             <div class="hero-main-text">
-                <h2>
-                    SPORTS INFRASTRUCTURE. <span>BUILT FOR CHAMPIONS.</span>
-                </h2>
-                <h1>
-                    <strong>Empowering Every Game.</strong>
+                <h1 class="hero-title">
+                    <span class="title-line">SPORTS</span>
+                    <span class="title-line">INFRASTRUCTURE</span>
+                    <span class="title-accent">BUILT FOR CHAMPIONS</span>
                 </h1>
-            </div>
-            <div class="hero-bottom-text">
-                <p class="hero-tagline">Enabling Every Dream.</p>
-                <div class="hero-divider"></div>
+                <p class="hero-subtitle">Empowering Every Game. Enabling Every Dream.</p>
+                <div class="hero-cta">
+                    <a href="https://wa.me/918899988890?text=Hi%20YNEXTGEN%2C%20I%20am%20interested%20in%20your%20sports%20infrastructure%20services.%20Please%20contact%20me!" class="hero-button primary" target="_blank">
+                        <span>Get Project Quote</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#collections" class="hero-button secondary">
+                        <span>View Our Work</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -113,7 +116,6 @@
                 
                 <h3 style="margin-top: 60px;">GALLERY</h3>
                 <div class="showroom-slideshow">
-                    <div class="showroom-overlay"></div>
                     <div class="showroom-slides">
                         <div class="showroom-slide">
                             <img src="images/gallery/6.png" alt="Gallery 6" class="clone">
@@ -147,6 +149,14 @@
                             <img src="images/gallery/1.png" alt="Gallery 1 Clone" class="clone">
                             <div class="showroom-caption">Badminton Court</div>
                         </div>
+                    </div>
+                    <div class="slideshow-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
                     </div>
                 </div>
             </div>
@@ -199,7 +209,7 @@
     </section>
 
     <!-- Sports Facilities Section - FULLY UPDATED TO MATCH SPORTS.JPG -->
-    <section class="collections">
+    <section class="collections" id="collections">
         <div class="container">
             <div class="collections-header">
                 <h2>OUR SPORTS FACILITIES</h2>
@@ -247,109 +257,113 @@
             <!-- Grid of Smaller Cards -->
             <div class="collections-cta">
                 <div class="more-facilities-grid">
-                    <!-- 5. Squash court -->
+                    <div class="progress-line-main"></div>
+                    <div class="progress-dot-main"></div>
+                    
+                    <!-- Cards will appear alternating left-right -->
+                    <!-- Card 1 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:0">
                         <i class="fas fa-th"></i>
                         <h4>Squash Courts</h4>
                         <p>Professional squash courts with glass back walls and premium surfaces.</p>
                     </div>
                     
-                    <!-- 6. Cricket Turf -->
+                    <!-- Card 2 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:1">
                         <i class="fas fa-baseball-ball"></i>
                         <h4>Cricket Turfs</h4>
                         <p>Professional cricket pitches with natural turf and practice nets.</p>
                     </div>
                     
-                    <!-- 7. Football Turf -->
+                    <!-- Card 3 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:2">
                         <i class="fas fa-futbol"></i>
                         <h4>Football Turfs</h4>
                         <p>FIFA-certified synthetic turf fields with professional markings.</p>
                     </div>
                     
-                    <!-- 8. Hockey Turf -->
+                    <!-- Card 4 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:3">
                         <i class="fas fa-circle"></i>
                         <h4>Hockey Turfs</h4>
                         <p>Olympic-grade synthetic turfs with water-based systems.</p>
                     </div>
                     
-                    <!-- 9. Tennis court -->
+                    <!-- Card 5 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:4">
                         <i class="fas fa-table-tennis"></i>
                         <h4>Tennis Courts</h4>
-                        <p>Professional courts with acrylic or synthetic surfaces.</p>
+                        <p>Hard court and clay court options with professional net systems.</p>
                     </div>
                     
-                    <!-- 10. Swimming pool -->
+                    <!-- Card 6 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:5">
                         <i class="fas fa-water"></i>
                         <h4>Swimming Pools</h4>
-                        <p>Olympic-size pools with advanced filtration systems.</p>
+                        <p>Olympic-size pools with advanced filtration and heating systems.</p>
                     </div>
                     
-                    <!-- 11. Drill nursery -->
+                    <!-- Card 7 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:6">
                         <i class="fas fa-child"></i>
-                        <h4>Drill Nursery</h4>
-                        <p>Training facilities for young athletes with age-appropriate equipment.</p>
+                        <h4>Training Nursery</h4>
+                        <p>Specialized training areas for young athletes and skill development.</p>
                     </div>
                     
-                    <!-- 12. Out door gym -->
+                    <!-- Card 8 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:7">
                         <i class="fas fa-dumbbell"></i>
                         <h4>Outdoor Gyms</h4>
-                        <p>Weather-resistant fitness equipment for parks and public spaces.</p>
+                        <p>Weather-resistant fitness equipment for outdoor strength training.</p>
                     </div>
                     
-                    <!-- 13. Children swings -->
+                    <!-- Card 9 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:8">
                         <i class="fas fa-child-reaching"></i>
-                        <h4>Children Swings</h4>
-                        <p>Playground equipment including swings, slides and climbing structures.</p>
+                        <h4>Children Play Area</h4>
+                        <p>Safe and colorful playground equipment for kids recreation.</p>
                     </div>
                     
-                    <!-- 14. Kabaddi arenas -->
+                    <!-- Card 10 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:9">
                         <i class="fas fa-users"></i>
                         <h4>Kabaddi Arenas</h4>
-                        <p>Professional kabaddi courts with safety mats and proper markings.</p>
+                        <p>Traditional Indian sport arenas with proper soil surfacing.</p>
                     </div>
                     
-                    <!-- 15. Wrestling arenas -->
+                    <!-- Card 11 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:10">
                         <i class="fas fa-hand-rock"></i>
                         <h4>Wrestling Arenas</h4>
-                        <p>Olympic-standard wrestling mats and equipment for competitions.</p>
+                        <p>Professional wrestling mats with safety padding and equipment.</p>
                     </div>
                     
-                    <!-- 16. Indoor gym -->
+                    <!-- Card 12 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:11">
                         <i class="fas fa-warehouse"></i>
                         <h4>Indoor Gyms</h4>
-                        <p>Fully-equipped fitness centers with modern equipment.</p>
+                        <p>Fully equipped fitness centers with modern exercise equipment.</p>
                     </div>
                     
-                    <!-- 17. Paint Ball Gun -->
+                    <!-- Card 13 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:12">
                         <i class="fas fa-paint-brush"></i>
-                        <h4>Paint Ball Zones</h4>
-                        <p>Adventure sport arenas with obstacles and safety gear.</p>
+                        <h4>Paintball Arenas</h4>
+                        <p>Adventure sport facilities with themed obstacle courses.</p>
                     </div>
                     
-                    <!-- 18. Go Kart Track -->
+                    <!-- Card 14 - Left side (even) -->
                     <div class="more-facility-card" style="--card-index:13">
                         <i class="fas fa-flag-checkered"></i>
-                        <h4>Go Kart Tracks</h4>
+                        <h4>Go-Kart Tracks</h4>
                         <p>Professional racing circuits with safety barriers and timing systems.</p>
                     </div>
                     
-                    <!-- 19. Jogging Track -->
+                    <!-- Card 15 - Right side (odd) -->
                     <div class="more-facility-card" style="--card-index:14">
                         <i class="fas fa-running"></i>
                         <h4>Jogging Tracks</h4>
-                        <p>All-weather running tracks with distance markers and lighting.</p>
+                        <p>Rubberized running tracks with proper lane markings and drainage.</p>
                     </div>
                 </div>
             </div>
@@ -423,6 +437,16 @@
 <a href="https://wa.me/918899988890?text=Hi%20YNEXTGEN%2C%20I%20am%20interested%20in%20your%20sports%20infrastructure%20services.%20Please%20contact%20me!" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="themeToggle" aria-label="Toggle Light/Dark Mode">
+        <div class="toggle-icon">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+        </div>
+        <div class="toggle-slider"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
