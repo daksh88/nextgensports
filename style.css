@@ -2315,8 +2315,8 @@ r
                 gap: 15px;
             }
             
-            .showroom, .about, .collections, .cta {
-                padding: 100px 0;
+            .showroom, .about, .collections, .cta, .sports-info, .advantages, .applications, .why-choose-us, .key-factors, .faq-section {
+                padding: 80px 0;
             }
             
             .about-container {
@@ -2332,13 +2332,32 @@ r
                 grid-template-columns: 1fr;
             }
             
-            .showroom h2, .about-content h2, .collections-header h2, .cta h2 {
-                font-size: 46px;
+            .showroom h2, .about-content h2, .collections-header h2, .cta h2, .sports-info h2, .advantages h2, .applications h2, .why-choose-us h2, .key-factors h2, .faq-section h2 {
+                font-size: 38px;
             }
             
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 50px;
+            }
+            
+            .advantages-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 30px;
+            }
+            
+            .applications-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .company-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .factors-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 30px;
             }
         }
         
@@ -2434,8 +2453,8 @@ r
                 font-size: 13px;
             }
             
-            .showroom h2, .about-content h2, .collections-header h2, .cta h2 {
-                font-size: 38px;
+            .showroom h2, .about-content h2, .collections-header h2, .cta h2, .sports-info h2, .advantages h2, .applications h2, .why-choose-us h2, .key-factors h2, .faq-section h2 {
+                font-size: 28px;
             }
             
             .showroom-slideshow {
@@ -2461,8 +2480,8 @@ r
                 height: 8px;
             }
             
-            .cta {
-                padding: 100px 0;
+            .cta, .sports-info, .advantages, .applications, .why-choose-us, .key-factors, .faq-section {
+                padding: 60px 0;
             }
             
             .logo-section {
@@ -2477,9 +2496,509 @@ r
                 padding-top: 5px;
                 border-top: 1px solid rgba(0, 255, 136, 0.2);
             }
+            
+            .advantages-grid, .applications-grid, .factors-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .company-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .advantage-card, .application-item, .factor-card, .stat-item {
+                padding: 25px 20px;
+            }
+            
+            .info-content p, .applications-content p, .company-description p {
+                font-size: 16px;
+                text-align: left;
+            }
+            
+            .faq-question {
+                padding: 20px;
+            }
+            
+            .faq-question h4 {
+                font-size: 16px;
+            }
+            
+            .faq-answer {
+                padding: 0 20px;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 20px 20px;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 22px;
+                line-height: 50px;
+            }
         }
         
         /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px;
+            line-height: 60px;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background: #128c7e;
+            transform: scale(1.1);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Sports Info Section */
+        .sports-info {
+            padding: 120px 0;
+            background: var(--card-bg);
+            color: var(--light);
+        }
+        
+        .sports-info h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .info-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--light-gray);
+            margin-bottom: 30px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Advantages Section */
+        .advantages {
+            padding: 120px 0;
+            background: var(--dark-bg);
+        }
+        
+        .advantages h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 80px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+        
+        .advantage-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .advantage-card > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .advantage-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+        }
+        
+        .advantage-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .advantage-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .advantage-icon i {
+            font-size: 32px;
+            color: var(--dark);
+        }
+        
+        .advantage-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--light);
+            font-weight: 600;
+        }
+        
+        .advantage-card p {
+            color: var(--light-gray);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Applications Section */
+        .applications {
+            padding: 120px 0;
+            background: var(--darker);
+        }
+        
+        .applications h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 60px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .applications-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--light-gray);
+            margin-bottom: 50px;
+            text-align: center;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .application-item {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            transition: var(--transition);
+        }
+        
+        .application-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0, 255, 136, 0.15);
+        }
+        
+        .application-item i {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .application-item h4 {
+            font-size: 20px;
+            color: var(--light);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .application-item p {
+            color: var(--light-gray);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 120px 0;
+            background: var(--card-bg);
+        }
+        
+        .why-choose-us h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 80px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .company-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: var(--dark-bg);
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 30px rgba(0, 255, 136, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: var(--light-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .company-description p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--light-gray);
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* Key Factors Section */
+        .key-factors {
+            padding: 120px 0;
+            background: var(--dark-bg);
+        }
+        
+        .key-factors h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 80px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .factor-card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .factor-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gradient);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .factor-card > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .factor-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.25);
+        }
+        
+        .factor-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .factor-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .factor-icon i {
+            font-size: 28px;
+            color: var(--dark);
+        }
+        
+        .factor-card h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--light);
+            font-weight: 600;
+        }
+        
+        .factor-card p {
+            color: var(--light-gray);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 120px 0;
+            background: var(--darker);
+        }
+        
+        .faq-section h2 {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 80px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 255, 136, 0.1);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            border-color: var(--accent);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: rgba(0, 255, 136, 0.05);
+        }
+        
+        .faq-question h4 {
+            font-size: 18px;
+            color: var(--light);
+            font-weight: 600;
+            margin: 0;
+            flex: 1;
+        }
+        
+        .faq-question i {
+            color: var(--accent);
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 30px 25px;
+        }
+        
+        .faq-answer p {
+            color: var(--light-gray);
+            line-height: 1.6;
+            font-size: 16px;
+            margin: 0;
+        }
 .whatsapp-float {
     position: fixed;
     right: 32px;
