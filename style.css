@@ -352,6 +352,7 @@
             align-items: center;
             height: 80px;
             padding: 0 60px;
+            width: 100%;
         }
         
         .logo-section {
@@ -379,15 +380,16 @@
         
         /* Push all nav links and button to the right */
         .header-container > .logo-section {
-            margin-right: 48px;
+            margin-right: 60px;
         }
         
         .header-container > div:not(.logo-section):not(.mobile-toggle) {
             margin-left: 0;
             display: flex;
             align-items: center;
-            gap: 28px;
-            justify-content: flex-end;
+            gap: 40px;
+            justify-content: space-between;
+            flex: 1;
         }
         
         .logo-main {
@@ -444,8 +446,9 @@
         
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 40px;
             margin-left: 0;
+            flex: 1;
         }
         
         .nav-links a {
@@ -503,7 +506,7 @@
             font-size: 14px;
             background: var(--gradient);
             color: var(--dark);
-            padding: 16px 32px;
+            padding: 16px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -512,9 +515,12 @@
             transition: var(--transition);
             border: 2px solid transparent;
             font-family: 'Montserrat', sans-serif;
-            margin-left: 18px;
+            margin-left: 30px;
             position: relative;
             overflow: hidden;
+            min-width: 180px;
+            text-align: center;
+            white-space: nowrap;
         }
         
         .cta-button::before {
